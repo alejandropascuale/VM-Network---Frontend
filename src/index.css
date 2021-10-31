@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --brown: #C9BD88;
+    --light-color: #7D7C7A;
+    --dark-color: #5B5B5B;
+    --hover: rgba(17,17,17,.85);
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    border: none;
+    transition: all .2s linear;
+    color: var(--dark-color);
+}
+
+/* header section starts */
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+header .logo-icon {
+    display: flex;
+    justify-content: flex-start;
+}
+header .display-desktop {
+    display: none;
+    margin: auto;
+}
+header .logo-icon:hover, header .icon-name:hover {
+    cursor: pointer;
+}
+.fa-bars {
+    font-size: 2rem;
+}
+
+/* header section ends */
+
+/* login section starts */
+
+.main-container {
+    margin-top: 50%;
+}
+main .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--light-color);
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+label {
+    color: #fff;
+    font-size: 1.1rem;
+}
+input {
+    border-radius: .3rem;
+    padding: .3rem;
+    width: 90%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    font-size: .5rem;
+}
+main form #login-button {
+    width: 35px;
+    height: 25px;
+    border-radius: 0.3rem;
+}
+main form #login-button:hover {
+    background-color: #292929;
+    
+}
+main form #login-button:hover svg path {
+    color: #fff;
+}
+
+/* login section ends */
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .main-container {
+        margin-top: 25%;
+    }
+}
+
+@media (min-width: 1024px) {
+    header .display-mobile {
+        display: none;
+    }
+    header .display-desktop {
+        display: block;
+    }
+    header .logo-name {
+        width: 100%;
+        text-align: left;
+    }
+    main .login-form {
+        width: 50%;
+    }
+    main form #login-button {
+        width: 65px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main-container {
+        margin-top: 15%;
+    }
+    main .login-form {
+        width: 40%;
+    }
+    label {
+        font-size: 1.4rem;
+    }
+    input {
+        font-size: 1rem;
+    }
+}
