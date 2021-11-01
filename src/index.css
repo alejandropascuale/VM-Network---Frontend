@@ -44,6 +44,17 @@ header .logo-icon:hover, header .icon-name:hover {
 .fa-bars {
     font-size: 2rem;
 }
+.icon-user, .user-image-header {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background-color: #fff !important;
+}
 
 /* header section ends */
 
