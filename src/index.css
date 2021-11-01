@@ -76,16 +76,16 @@ input {
     margin-bottom: 3%;
     font-size: .5rem;
 }
-main form #login-button {
+main form #login-button, main form #register-button {
     width: 35px;
     height: 25px;
     border-radius: 0.3rem;
 }
-main form #login-button:hover {
+main form #login-button:hover, main form #register-button:hover {
     background-color: #292929;
     
 }
-main form #login-button:hover svg path {
+main form #login-button:hover svg path, main form #register-button:hover svg path {
     color: #fff;
 }
 
@@ -113,7 +113,7 @@ main form #login-button:hover svg path {
     main .login-form {
         width: 50%;
     }
-    main form #login-button {
+    main form #login-button, main form #register-button  {
         width: 65px;
         height: 40px;
         font-size: 1.3rem;
