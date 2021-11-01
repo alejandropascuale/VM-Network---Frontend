@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 import Header from './Header'
 
 const Register = () => {
-    
+    const [errors , setErrors] = useState();
+
     const userValidation = (e) => {
-        e.preventDefaul();
+        e.preventDefault();
+        let errors = {};
+        let password = document.querySelector('#password');
+        let confirmPassword = document.querySelector('#confirm-password');
+        if (password !== confirmPassword) {
+            errors.password = 'las contraseñas deben ser iguales';
+            setErrors(errors);
+        }
+        console.log(Object.keys(errors).length);
     }
     
     return (
@@ -29,7 +38,8 @@ const Register = () => {
                     <input type='password' id='password' name='password' autoComplete='true'/>
                     
                     <label htmlFor='confirm-password'>Repite contraseña</label>
-                    <input type='password' id='confirm-password' name='confirm-password' autoComplete='true'/>
+                    <input className={errors.password? 'is-invalid': ''} type='password' id='confirm-password' name='confirm-password' autoComplete='true'/>
+                    {errors && Object.keys(errors).length > 0? <p className='text-danger'>{errors.password}</p>: ''}
 
                     <button onClick={userValidation} type='submit' id='register-button'><FontAwesomeIcon icon={ faSignInAlt } /></button>
                 </form>
