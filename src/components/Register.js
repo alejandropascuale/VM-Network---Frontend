@@ -9,21 +9,26 @@ const Register = () => {
 
     const userValidation = (e) => {
         e.preventDefault();
-        let errors = {};
-        let password = document.querySelector('#password');
-        let confirmPassword = document.querySelector('#confirm-password');
+
+        let registerForm = document.querySelector('#register-form');
+        let errorsForm = {};
+        
+        let password = document.querySelector('#password').value;
+        let confirmPassword = document.querySelector('#confirm-password').value;
         if (password !== confirmPassword) {
-            errors.password = 'las contraseñas deben ser iguales';
-            setErrors(errors);
+            console.log('error en contraseña');
+            errorsForm.password = 'las contraseñas deben ser iguales';
+            setErrors(errorsForm);
+        } else {
+            registerForm.submit();
         }
-        console.log(Object.keys(errors).length);
     }
     
     return (
         <>
             <Header />
             <main className='main-container'>
-                <form className='login-form' action='http://localhost:3001/register' method='POST'>
+                <form className='login-form' id='register-form' action='http://localhost:3001/api/users/register' method='POST'>
 
                     <label htmlFor='idEmployee'>Nº legajo</label>
                     <input type='number' id='idEmployee' name='idEmployee' autoFocus/>
@@ -38,8 +43,8 @@ const Register = () => {
                     <input type='password' id='password' name='password' autoComplete='true'/>
                     
                     <label htmlFor='confirm-password'>Repite contraseña</label>
-                    <input className={errors.password? 'is-invalid': ''} type='password' id='confirm-password' name='confirm-password' autoComplete='true'/>
-                    {errors && Object.keys(errors).length > 0? <p className='text-danger'>{errors.password}</p>: ''}
+                    <input className={errors && errors.password? 'is-invalid': ''} type='password' id='confirm-password' name='confirm-password' autoComplete='true'/>
+                    {errors && errors.password? <p className='text-danger'>{errors.password}</p>: ''}
 
                     <button onClick={userValidation} type='submit' id='register-button'><FontAwesomeIcon icon={ faSignInAlt } /></button>
                 </form>
