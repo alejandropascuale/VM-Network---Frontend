@@ -7,7 +7,7 @@ import Logo from '../assets/images/Logo-solo.jpeg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUserCircle, faFileInvoice, faSignOutAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Modal, ModalBody} from 'reactstrap'
+import {Navbar} from 'reactstrap'
 
 import { UserContext } from '../App';
 
@@ -41,33 +41,31 @@ const UserLoginHeader = () => {
             <div className='display-mobile bars-container' onClick={openMenu}>
                 <FontAwesomeIcon icon={faBars} />
             </div>
-            <Modal isOpen={userModal}>
-                <ModalBody className='display-mobile user-menu' id='navBar'>
-                    <ul type='none'>
-                        <li>
-                            <FontAwesomeIcon icon={faTimes} onClick={closeMenu}/>
-                        </li>
-                        <li>
-                            <Link to="/user/account/edit" className='side-menu-option'>
-                                <FontAwesomeIcon icon={faUserCircle} />
-                                <p>Datos de la cuenta</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/user/account/my-order" className='side-menu-option'>
-                                <FontAwesomeIcon icon={faFileInvoice} />
-                                <p>Ver mis Recibos</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/user/account/my-order" className='side-menu-option'>
-                                <FontAwesomeIcon icon={faSignOutAlt} />
-                                <p>Cerrar Sesión</p>
-                            </Link>
-                        </li>
-                    </ul>
-                </ModalBody>
-            </Modal>
+            <Navbar isOpen={userModal} className='display-mobile user-menu' id='navBar'>
+                <ul type='none'>
+                    <li>
+                        <FontAwesomeIcon icon={faTimes} onClick={closeMenu}/>
+                    </li>
+                    <li>
+                        <Link to="/user/account/edit" className='side-menu-option'>
+                            <FontAwesomeIcon icon={faUserCircle} />
+                            <p>Datos de la cuenta</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/user/account/my-order" className='side-menu-option'>
+                            <FontAwesomeIcon icon={faFileInvoice} />
+                            <p>Ver mis Recibos</p>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/user/account/my-order" className='side-menu-option'>
+                            <FontAwesomeIcon icon={faSignOutAlt} />
+                            <p>Cerrar Sesión</p>
+                        </Link>
+                    </li>
+                </ul>
+            </Navbar>
         </header>
     )
 }

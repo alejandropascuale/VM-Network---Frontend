@@ -70,8 +70,49 @@ header nav ul li .side-menu-option {
     align-items: center;
     padding: 1rem;
 }
-.active-navBar {
-    right: 0;
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+.fade {
+    transition: opacity .15s linear;
+}
+.modal.fade .modal-dialog {
+    transition: transform .3s ease-out;
+    transform: translate(0,-50px);
+}
+.modal-dialog {
+    position: relative;
+    top: 10rem;
+    width: auto;
+    margin: 0;
+    pointer-events: none;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 85% !important;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    margin: auto;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
 }
 
 /* header section ends */
