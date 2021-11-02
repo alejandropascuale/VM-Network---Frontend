@@ -154,7 +154,7 @@ body main {
 .align-titles {
     text-align: center;
 }
-.flex-row {
+.flex-options-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -167,19 +167,19 @@ body main {
     border-radius: .5rem;
     width: 90%;
 }
-main div.flex-row section.box-space1 ul.data-form li a, main div.flex-row section.box-space2 ul.data-form li a{
+main div.flex-options-container section.box-space1 ul.data-form li a, main div.flex-options-container section.box-space2 ul.data-form li a{
     display: flex;
     width: 90%;
     align-items: center;
     justify-content: flex-start;
 }
-main div.flex-row section.box-space1 ul.data-form li a svg, main div.flex-row section.box-space2 ul.data-form li a svg {
+main div.flex-options-container section.box-space1 ul.data-form li a svg, main div.flex-options-container section.box-space2 ul.data-form li a svg {
     margin: 0 .3rem;
 }
-main div.flex-row section.box-space1 ul.data-form li a h2, main div.flex-row section.box-space1 ul.data-form li svg path {
+main div.flex-options-container section.box-space1 ul.data-form li a h2, main div.flex-options-container section.box-space1 ul.data-form li svg path {
     color: #fff;
 }
-main div.flex-row section.box-space2 ul.data-form li a h2, main div.flex-row section.box-space2 ul.data-form li svg path {
+main div.flex-options-container section.box-space2 ul.data-form li a h2, main div.flex-options-container section.box-space2 ul.data-form li svg path {
     color: #fff;
 }
 
@@ -212,7 +212,7 @@ main div.flex-row section.box-space2 ul.data-form li a h2, main div.flex-row sec
         height: 40px;
         font-size: 1.3rem;
     }
-    .flex-row {
+    .flex-options-container {
         flex-direction: row;
     }
 }

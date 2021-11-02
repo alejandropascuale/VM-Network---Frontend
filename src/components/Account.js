@@ -18,7 +18,7 @@ const Account = () => {
                     <h3>{userLogin.names}</h3>
                 </div>
             </section>
-            <div className="flex-row">
+            <div className="flex-options-container">
                 <section className="box-space1">
                     <ul type='none' className="data-form">
                         <li>
