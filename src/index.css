@@ -71,7 +71,7 @@ header nav ul li .side-menu-option {
     padding: 1rem;
 }
 .active-navBar {
-    right: 0;
+    right: 0 !important;
 }
 
 /* header section ends */
