@@ -15,6 +15,9 @@
     transition: all .2s linear;
     color: var(--dark-color);
 }
+body {
+    background-color: #e7e7e7;
+}
 
 /* header section starts */
 
@@ -54,6 +57,21 @@ header .logo-icon:hover, header .icon-name:hover {
     font-size: 1.5rem;
     border-radius: 50%;
     background-color: #fff !important;
+}
+header nav.user-menu {
+    position: absolute;
+    top: 7.7rem; right: -100%;
+    padding: 1rem;
+    background-color: #fff;
+    width: 85%;
+}
+header nav ul li .side-menu-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.active-navBar {
+    right: 0;
 }
 
 /* header section ends */
@@ -117,6 +135,56 @@ main form #login-button:hover svg path, main form #register-button:hover svg pat
 
 /* login and register section ends */
 
+/* Account user starts */
+body main {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+}
+.align-image-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-image {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+}
+.align-titles {
+    text-align: center;
+}
+.flex-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.box-space1, .box-space2 {
+    margin-top: 5%;
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    width: 90%;
+}
+main div.flex-row section.box-space1 ul.data-form li a, main div.flex-row section.box-space2 ul.data-form li a{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-start;
+}
+main div.flex-row section.box-space1 ul.data-form li a svg, main div.flex-row section.box-space2 ul.data-form li a svg {
+    margin: 0 .3rem;
+}
+main div.flex-row section.box-space1 ul.data-form li a h2, main div.flex-row section.box-space1 ul.data-form li svg path {
+    color: #fff;
+}
+main div.flex-row section.box-space2 ul.data-form li a h2, main div.flex-row section.box-space2 ul.data-form li svg path {
+    color: #fff;
+}
+
+/* Account user ends */
+
 /* media queries */
 
 @media (min-width: 768px) {
@@ -143,6 +211,9 @@ main form #login-button:hover svg path, main form #register-button:hover svg pat
         width: 65px;
         height: 40px;
         font-size: 1.3rem;
+    }
+    .flex-row {
+        flex-direction: row;
     }
 }
 

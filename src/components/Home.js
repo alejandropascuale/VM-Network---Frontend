@@ -1,14 +1,21 @@
-import React from 'react'
-import Header from './Header'
+import React, { useContext } from 'react'
+import { UserContext } from '../App';
+
+import Account from './Account';
 import Login from './Login'
 
 const Home = () => {
-    return (
-        <>
-            <Header />
-            <Login />  
-        </>
-    )
+    const {userLogin} = useContext(UserContext);
+    
+    if(userLogin && typeof userLogin != 'undefined'){
+        return (
+            <Account />
+        )
+    } else {
+        return (
+            <Login />
+        )
+    }
 }
 
 export default Home
