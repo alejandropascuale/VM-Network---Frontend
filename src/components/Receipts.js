@@ -10,7 +10,7 @@ const Receipts = () => {
             <br></br>
             <br></br>
             <br></br>
-            <div>
+            <div className='reciepts-container'>
                 <table>
                     <thead>
                         <tr>
@@ -25,6 +25,7 @@ const Receipts = () => {
                         </tr>
                     </tbody>
                 </table>
+                <Link to='/' className='normal-button'>Volver</Link>
             </div>
         </>
     )
