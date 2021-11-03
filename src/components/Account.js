@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../App';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle, faGift, faCartArrowDown, faHistory, faHeart, faUserTimes, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle, faCartArrowDown, faHistory, faHeart, faUserTimes, faSignInAlt, faFileInvoice } from '@fortawesome/free-solid-svg-icons'
 
 const Account = () => {
     const {userLogin} = useContext(UserContext);
@@ -22,14 +22,14 @@ const Account = () => {
                 <section className="box-space1">
                     <ul type='none' className="data-form">
                         <li>
-                            <Link to="/user/account/edit">
+                            <Link to="/account/edit">
                                 <FontAwesomeIcon icon={faUserCircle} />
                                 <h2>Datos de la cuenta</h2>
                             </Link>
                         </li>
                         <li>
                             <Link to="/account/receipts">
-                                <FontAwesomeIcon icon={faGift} />
+                                <FontAwesomeIcon icon={faFileInvoice} />
                                 <h2>Mis Recibos de Sueldo</h2>
                             </Link>
                         </li>

@@ -233,6 +233,17 @@ main div.flex-row ul.data-form li a h2:hover {
     background-color: red;
 }
 
+.back-icon svg {
+    font-size: 2rem;
+}
+.back-icon svg path {
+    color: white;
+}
+.conteiner-close-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
 /* Account user ends */
 
 /* Receipts Section starts */

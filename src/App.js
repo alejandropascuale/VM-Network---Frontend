@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Register from "./components/Register";
 import Header from './components/Header';
 import Receipts from './components/Receipts';
+import EditAccount from './components/EditAccount';
 
 export const UserContext = createContext(null);
 
@@ -45,6 +46,7 @@ function App() {
         <Route path='/' exact={true} component={Home} />
         <Route path='/register' component={Register} />
         <Route path='/account/receipts' component={Receipts} />
+        <Route path='/account/edit' component={EditAccount} />
       </BrowserRouter>
     </UserContext.Provider>
   );
