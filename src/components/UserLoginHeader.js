@@ -38,19 +38,19 @@ const UserLoginHeader = () => {
             <nav className={sideBar? 'display-mobile user-menu active-navBar': 'display-mobile user-menu'} id='navBar'>
                 <ul type='none'>
                     <li>
-                        <Link to="/user/account/edit" className='side-menu-option'>
+                        <Link to="/user/account/edit" className='side-menu-option' onClick={showSideBar}>
                             <FontAwesomeIcon icon={faUserCircle} />
                             <p>Datos de la cuenta</p>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/user/account/my-order" className='side-menu-option'>
+                        <Link to="/account/receipts" className='side-menu-option' onClick={showSideBar}>
                             <FontAwesomeIcon icon={faFileInvoice} />
                             <p>Ver mis Recibos</p>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/user/account/my-order" className='side-menu-option'>
+                        <Link to="/user/account/my-order" className='side-menu-option' onClick={showSideBar}>
                             <FontAwesomeIcon icon={faSignOutAlt} />
                             <p>Cerrar Sesión</p>
                         </Link>
