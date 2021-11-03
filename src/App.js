@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import Home from "./components/Home";
 import Register from "./components/Register";
 import Header from './components/Header';
+import Receipts from './components/Receipts';
 
 export const UserContext = createContext(null);
 
@@ -43,6 +44,7 @@ function App() {
         <Header />
         <Route path='/' exact={true} component={Home} />
         <Route path='/register' component={Register} />
+        <Route path='/account/receipts' component={Receipts} />
       </BrowserRouter>
     </UserContext.Provider>
   );

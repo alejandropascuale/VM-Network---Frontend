@@ -34,9 +34,9 @@ const Account = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/">
+                            <Link to="/account/receipts">
                                 <FontAwesomeIcon icon={faGift} />
-                                <h2>Cupones</h2>
+                                <h2>Mis Recibos de Sueldo</h2>
                             </Link>
                         </li>
                         <form action="/user/account/delete?_method=DELETE" method="POST" id="delete-form">
