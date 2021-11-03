@@ -166,21 +166,71 @@ body main {
     padding: 1.5rem;
     border-radius: .5rem;
     width: 90%;
+    box-shadow: var(--box-shadow);
 }
-main div.flex-row section.box-space1 ul.data-form li a, main div.flex-row section.box-space2 ul.data-form li a{
+main div.flex-row ul.data-form li a, main div.flex-row ul.data-form li a{
     display: flex;
     width: 90%;
     align-items: center;
     justify-content: flex-start;
 }
-main div.flex-row section.box-space1 ul.data-form li a svg, main div.flex-row section.box-space2 ul.data-form li a svg {
+main div.flex-row ul.data-form li a svg, main div.flex-row ul.data-form li a svg {
     margin: 0 .3rem;
 }
-main div.flex-row section.box-space1 ul.data-form li a h2, main div.flex-row section.box-space1 ul.data-form li svg path {
+main div.flex-row ul.data-form li a h2, main div.flex-row ul.data-form li svg path {
     color: #fff;
 }
-main div.flex-row section.box-space2 ul.data-form li a h2, main div.flex-row section.box-space2 ul.data-form li svg path {
+main div.flex-row ul.data-form li:hover, 
+main div.flex-row ul.data-form li:hover svg path{
+    color: var(--brown);
+    /* background-color: white; */
+}
+main div.flex-row ul.data-form li a h2:hover {
+    color: var(--brown);
+}
+.delete-account-container {
+    background-color: white;
+    padding: .5rem;
+    border-radius: .5rem;
+    width: 160px;
+    margin: auto;
+    display: flex;
+    margin-top: 1rem;
+}
+.delete-user-button {
+    background-color: white;
+    margin-left: .5rem;
+}
+.delete-account-container:hover {
+    background-color: red;
+}
+.delete-account-container:hover .delete-user-button {
+    background-color: red;
+    color: white;
+}
+.delete-account-container:hover svg path {
+    background-color: red;
+    color: white;
+}
+.logout-button-container {
+    background-color: var(--dark-color);
+    padding: .5rem;
+    border-radius: .5rem;
+    width: 140px;
+    margin: auto;
+    display: flex;
+    margin-top: 1rem;
+}
+.logout-button {
+    background-color: var(--dark-color);
+    margin-left: .5rem;
     color: #fff;
+}
+.logout-button-container svg path {
+    color: #fff;
+}
+.logout-button-container:hover, .logout-button-container:hover .logout-button {
+    background-color: red;
 }
 
 /* Account user ends */
@@ -267,6 +317,9 @@ table th, table td {
     }
     .flex-row {
         flex-direction: row;
+    }
+    .box-space1, .box-space2 {
+        width: 45%;
     }
     table {
         width: 80%;
