@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../App';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCircle, faCartArrowDown, faHistory, faHeart, faUserTimes, faSignInAlt, faFileInvoice } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle, faHistory, faHeart, faUserTimes, faSignInAlt, faFileInvoice } from '@fortawesome/free-solid-svg-icons'
 
 const Account = () => {
     const {userLogin} = useContext(UserContext);

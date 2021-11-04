@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faSignInAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
 import Header from './Header'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
     const [errors , setErrors] = useState();
@@ -29,6 +30,11 @@ const Register = () => {
             <Header />
             <main className='main-container'>
                 <form className='login-form' id='register-form' action='http://localhost:3001/api/users/register' method='POST'>
+                    <div className='conteiner-close-button'>
+                        <Link to='/' exact='true' className='back-icon'>
+                            <FontAwesomeIcon icon={faTimes} />
+                        </Link>
+                    </div>
 
                     <label htmlFor='idEmployee'>Nº legajo</label>
                     <input type='number' id='idEmployee' name='idEmployee' autoFocus/>
