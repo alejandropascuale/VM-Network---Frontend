@@ -44,7 +44,7 @@ const Register = () => {
         <>
             <Header />
             <main className='main-container'>
-                <form className='login-form' id='edit-form' action='http://localhost:3001/api/users/edit' method='POST'>
+                <form className='login-form' id='edit-form' action={`http://localhost:3001/users/edit/${userLogin.iduser}?_method=PUT`} encType="multipart/form-data" method='POST'>
 
                     <div className='conteiner-close-button'>
                         <Link to='/' exact='true' className='back-icon'>

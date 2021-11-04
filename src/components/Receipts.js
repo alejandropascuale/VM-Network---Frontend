@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 
+import { UserContext } from '../App';
+
 const Receipts = () => {
+    const [ receipts, setReceipts] = useState([]);
+    const { userLogin } = useContext(UserContext);
+
+    useEffect( () => {
+        fetch(`http://localhost:3001/api/users/receipts/${userLogin.idEmployee}`)
+            .then(res => res.json())
+            .then(data => {
+                setReceipts(data)
+            })
+    }, [])
+
+
     return (
         <>
             <br></br>
@@ -10,19 +24,23 @@ const Receipts = () => {
             <br></br>
             <br></br>
             <br></br>
-            <div className='reciepts-container'>
+            <div className='receipts-container'>
                 <table>
                     <thead>
                         <tr>
-                            <th>Periodo</th>
-                            <th>Action</th> 
+                            <th>Período</th>
+                            <th>Acción</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Octubre 2021</td>
-                            <td><Link to='/files/Copia de VM - Recibos de Sueldos 2021-10.pdf' target="_blank" download>Descargar recibo</Link></td>
-                        </tr>
+                        {receipts.map((receipt, i) => {
+                            return (
+                            <tr key={i}>
+                                <td>{receipt.period}</td>
+                                <td><Link to={receipt.file} target="_blank" download>Descargar recibo</Link></td>
+                            </tr>
+                            )
+                        })}
                     </tbody>
                 </table>
                 <Link to='/' className='normal-button'>Volver</Link>
