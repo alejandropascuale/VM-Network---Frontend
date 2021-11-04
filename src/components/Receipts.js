@@ -13,7 +13,7 @@ const Receipts = () => {
             .then(data => {
                 setReceipts(data)
             })
-    }, [])
+    }, [userLogin])
 
 
     return (

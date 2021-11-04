@@ -44,7 +44,7 @@ const Register = () => {
         <>
             <Header />
             <main className='main-container'>
-                <form className='login-form' id='edit-form' action={`http://localhost:3001/users/edit/${userLogin.iduser}?_method=PUT`} encType="multipart/form-data" method='POST'>
+                <form className='login-form' id='edit-form' action={`http://localhost:3001/api/users/edit/${userLogin.idusers}?_method=PUT`} method='POST'>
 
                     <div className='conteiner-close-button'>
                         <Link to='/' exact='true' className='back-icon'>
@@ -52,19 +52,21 @@ const Register = () => {
                         </Link>
                     </div>
 
-                    <div className="align-image-user">
+                    {/* <div className="align-image-user">
                         <img src={userLogin.avatar} alt="userAvatar" className="user-image" />
                     </div>
-                    <input type='file' id='profile-picture' name='profile-picture' />
+                    <input type='file' id='profile-picture' name='profile-picture' /> */}
+                    {/* <label for="user-image"><img src={userLogin.avatar} /></label>
+                    <input type="file" id="user-image" name="user-image" hidden="true" accept="image/*"></input> */}
 
                     <label htmlFor='idEmployee'>Nº legajo</label>
-                    <input type='number' id='idEmployee' name='idEmployee' value={userLogin.idusers} disabled/>
+                    <input type='number' id='idEmployee' name='idEmployee' defaultValue={userLogin.idEmployee} disabled/>
                     
                     <label htmlFor='names'>Nombre y Apellido</label>
-                    <input type='text' id='names' name='names' value={userLogin.names} onChange={handleChange}/>
+                    <input type='text' id='names' name='names' defaultValue={userLogin.names} onChange={handleChange}/>
                     
                     <label htmlFor='userName'>Usuario</label>
-                    <input type='text' id='userName' name='userName' value={userLogin.userName}/>
+                    <input type='text' id='userName' name='userName' defaultValue={userLogin.userName}/>
                     
                     <label htmlFor='password'>Contraseña</label>
                     <input className={errors && errors.password? 'is-invalid': ''} type='password' id='password' name='password' autoComplete='true' />
