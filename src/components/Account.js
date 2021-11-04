@@ -33,7 +33,7 @@ const Account = () => {
                                 <h2>Mis Recibos de Sueldo</h2>
                             </Link>
                         </li>
-                        <form action="/user/account/delete?_method=DELETE" method="POST" id="delete-form">
+                        <form action="" method="POST" id="delete-form">
                             <div className='delete-account-container'>
                                 <FontAwesomeIcon icon={faUserTimes} />
                                 <button type="submit" className="delete-user-button" id="delete-user">Eliminar Cuenta</button>
@@ -44,27 +44,21 @@ const Account = () => {
                 <section className="box-space2">
                     <ul type='none' className="data-form">
                         <li>
-                            <Link to="/user/account/my-order">
-                                <FontAwesomeIcon icon={faCartArrowDown} />
-                                <h2>Ver mi Reserva</h2>
-                            </Link>
-                        </li>
-                        <li>
                             <Link to="/user/account/orders">
                                 <FontAwesomeIcon icon={faHistory} />
-                                <h2>Historial de Reservas</h2>
+                                <h2>Historial de Mensajes</h2>
                             </Link>
                         </li>
                         <li>
                             <Link to="">
                                 <FontAwesomeIcon icon={faHeart} />
-                                <h2>Mis Favoritos</h2>
+                                <h2>Mis Contactos</h2>
                             </Link>
                         </li>
                     </ul>
                 </section>
             </div>
-            <form action="/user/logout">
+            <form action="http://localhost:3001/api/users/logout">
                 <fieldset className="logout-button-container">
                     <FontAwesomeIcon icon={faSignInAlt} />
                     <button type="submit" className="logout-button">Cerrar Sesión</button>
