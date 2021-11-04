@@ -14,7 +14,7 @@ const Login = () => {
                 <label htmlFor='password'>Contraseña</label>
                 <input type='password' id='password' name='password' autoComplete='true'/>
 
-                <button type='submit' id='login-button' className='normal-button'><FontAwesomeIcon icon={ faSignInAlt } /></button>
+                <button type='submit' id='login-button' className='login-button'><FontAwesomeIcon icon={ faSignInAlt } /></button>
             </form>
         </main>
     )
