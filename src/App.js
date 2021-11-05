@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Receipts from './components/Receipts';
 import EditAccount from './components/EditAccount';
 import UploadReceipts from './components/UploadReceipts';
+import ReceiptsAdmin from './components/ReceiptsAdmin';
 
 export const UserContext = createContext(null);
 
@@ -48,6 +49,7 @@ function App() {
         <Route path='/register' component={Register} />
         <Route path='/account/receipts' component={Receipts} />
         <Route path='/account/edit' component={EditAccount} />
+        <Route path='/receipts' component={ReceiptsAdmin} />
         <Route path='/receipts/upload' component={UploadReceipts} />
       </BrowserRouter>
     </UserContext.Provider>
