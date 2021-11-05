@@ -44,7 +44,7 @@ const Register = () => {
         <>
             <Header />
             <main className='main-container'>
-                <form className='login-form' id='edit-form' action={`http://localhost:3001/api/users/edit/${userLogin.idusers}?_method=PUT`} method='POST'>
+                <form className='login-form' id='edit-form' action={`http://localhost:3001/api/users/edit/${userLogin.idusers}?_method=PUT`} encType='multipart/form-data' method='POST'>
 
                     <div className='conteiner-close-button'>
                         <Link to='/' exact='true' className='back-icon'>
@@ -56,8 +56,11 @@ const Register = () => {
                         <img src={userLogin.avatar} alt="userAvatar" className="user-image" />
                     </div>
                     <input type='file' id='profile-picture' name='profile-picture' /> */}
-                    {/* <label for="user-image"><img src={userLogin.avatar} /></label>
-                    <input type="file" id="user-image" name="user-image" hidden="true" accept="image/*"></input> */}
+                    <div className='align-image-user'>
+                        <label for="profile-picture"><img className='user-image' src={userLogin.avatar} /></label>
+                        <input type="file" id="profile-picture" name="profile-picture" hidden="true" accept="image/*"></input>
+                        <p className='edit-msg-avatar'>Edit</p>
+                    </div>
 
                     <label htmlFor='idEmployee'>Nº legajo</label>
                     <input type='number' id='idEmployee' name='idEmployee' defaultValue={userLogin.idEmployee} disabled/>

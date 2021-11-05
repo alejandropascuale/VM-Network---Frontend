@@ -64,7 +64,7 @@ const Account = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/account/receipts">
+                            <Link to="/receipts/upload">
                                 <FontAwesomeIcon icon={faUpload} />
                                 <h2>Subir Recibos</h2>
                             </Link>

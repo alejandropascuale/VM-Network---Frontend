@@ -6,7 +6,7 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 const Login = () => {
     
     return (
-        <main className='main-container'>
+        <main>
             <form className='login-form' action='http://localhost:3001/api/users/login' method='POST'>
                 <label htmlFor='userName'>Usuario</label>
                 <input type='text' id='userName' name='userName' autoFocus/>

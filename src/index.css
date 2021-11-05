@@ -89,7 +89,7 @@ main .login-form {
     background-color: var(--light-color);
     width: 80%;
     margin: auto;
-    padding: 2rem;
+    padding: 1.2rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
 }
@@ -131,6 +131,18 @@ main form #login-button:hover svg path, main form #register-button:hover svg pat
     font-size: 14px;
     margin-top: -2%;
     margin-bottom: 3%;
+}
+.edit-msg-avatar {
+    color: white;
+    display: none;
+}
+.align-image-user:hover .user-image {
+    opacity: 50%;
+}
+.align-image-user:hover .edit-msg-avatar {
+    display: block;
+    position: absolute;
+    font-size: 1rem;
 }
 
 /* login and register section ends */
@@ -300,7 +312,7 @@ table th, table td {
 
 @media (min-width: 768px) {
     .main-container {
-        margin-top: 25%;
+        margin-top: 20%;
     }
     table {
         width: 85%;
@@ -321,6 +333,9 @@ table th, table td {
     main .login-form {
         width: 50%;
     }
+    .main-container {
+        margin-top: 12%;
+    }
     main form #login-button, main form #register-button  {
         width: 65px;
         height: 40px;
@@ -334,6 +349,9 @@ table th, table td {
     }
     table {
         width: 80%;
+    }
+    input {
+        font-size: .8rem;
     }
 }
 
