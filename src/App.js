@@ -49,8 +49,8 @@ function App() {
         <Route path='/register' component={Register} />
         <Route path='/account/receipts' component={Receipts} />
         <Route path='/account/edit' component={EditAccount} />
-        <Route path='/receipts' component={ReceiptsAdmin} />
-        <Route path='/receipts/upload' component={UploadReceipts} />
+        <Route path='/receipts' exact={true} component={ReceiptsAdmin} />
+        <Route path='/receipts/upload' exact={true} component={UploadReceipts} />
       </BrowserRouter>
     </UserContext.Provider>
   );

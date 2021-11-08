@@ -57,8 +57,8 @@ const Register = () => {
                     </div>
                     <input type='file' id='profile-picture' name='profile-picture' /> */}
                     <div className='align-image-user'>
-                        <label for="profile-picture"><img className='user-image' src={userLogin.avatar} /></label>
-                        <input type="file" id="profile-picture" name="profile-picture" hidden="true" accept="image/*"></input>
+                        <label htmlFor="profile-picture"><img className='user-image' alt='avatar' src={userLogin.avatar} /></label>
+                        <input type="file" id="profile-picture" name="profile-picture" hidden={true} accept="image/*"></input>
                         <p className='edit-msg-avatar'>Edit</p>
                     </div>
 

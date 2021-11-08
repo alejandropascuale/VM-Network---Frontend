@@ -11,7 +11,6 @@ const Receipts = () => {
             .then(data => {
                 setReceipts(data)
             })
-            console.log(receipts);
     }, [])
 
 
